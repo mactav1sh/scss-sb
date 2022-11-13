@@ -1,0 +1,45 @@
+@use '../../styles/partials/base/_variables.scss' as *;
+
+.btn {
+  display: inline-block;
+  outline: none;
+  border: none;
+  color: $slate-600;
+  background-color: $slate-100;
+  cursor: pointer;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  text-transform: capitalize;
+
+  &:hover {
+    filter: brightness(95%);
+  }
+}
+
+.btn__contentWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.btn--small {
+  font-size: 14px;
+  padding: 0.4rem 0.8rem;
+}
+
+.btn--medium {
+  font-size: 18px;
+  padding: 0.6rem 1.6rem;
+}
+
+.btn--large {
+  font-size: 20px;
+  padding: 0.8rem 3.6rem;
+}
+
+.btn--edit {
+  color: $cyan;
+}
+.btn--delete {
+  color: $red;
+}

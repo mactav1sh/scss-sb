@@ -1,0 +1,6 @@
+@use './partials/base/_reset';
+@use './partials/base/variables';
+
+// Import components
+@use './partials/components/app';
+@use './partials/components/header';

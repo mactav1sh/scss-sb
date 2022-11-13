@@ -1,0 +1,50 @@
+$color-sec-menu: #3f3f46;
+
+%reset-list {
+  list-style: none;
+}
+
+// HEADER
+.header {
+  width: 100%;
+  min-height: 130vh;
+  background-color: #f0f9ff;
+}
+
+// SECONDARY MENU
+.menu-sec {
+  background: $color-sec-menu;
+  ul {
+    // max-width: 720px; // try this
+    @extend %reset-list;
+    display: flex;
+    justify-content: end;
+    gap: 1.6rem;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.7rem 0.5rem;
+    &:hover {
+      box-shadow: inset 0 -2px #fff;
+
+      // NOTE: THIS COULD BE USED INSTEAD OF BOX SHADOW
+      // &:after {
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 0;
+      //   content: '';
+      //   height: 2px;
+      //   width: 100%;
+      //   background: #fff;
+      // }
+    }
+  }
+}
+
+// MAIN MENU

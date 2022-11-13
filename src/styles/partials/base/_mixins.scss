@@ -1,0 +1,34 @@
+@mixin overlay($color, $opacity) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba($color: $color, $alpha: $opacity);
+}
+
+@mixin breakpoint($size) {
+  @if $size == 'sm' {
+    @media (min-width: 640px) {
+      @content;
+    }
+  }
+  @if $size == 'md' {
+    // return
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $size == 'lg' {
+    // return
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+  @if $size == 'xl' {
+    // return
+    @media (min-width: 1280px) {
+      @content;
+    }
+  }
+}

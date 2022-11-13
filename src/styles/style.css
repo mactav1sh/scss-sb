@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.blackoverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-sec ul {
+  list-style: none;
+}
+
+.header {
+  width: 100%;
+  min-height: 130vh;
+  background-color: #f0f9ff;
+}
+
+.menu-sec {
+  background: #3f3f46;
+}
+.menu-sec ul {
+  display: flex;
+  justify-content: end;
+  gap: 1.6rem;
+  font-size: 14px;
+  font-weight: 600;
+}
+.menu-sec a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.7rem 0.5rem;
+}
+.menu-sec a:hover {
+  box-shadow: inset 0 -2px #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,48 @@
+@use '../../styles/partials/base/variables' as *;
+
+.usersTable {
+  // width: 100%;
+  color: $slate-600;
+  border-collapse: collapse;
+}
+
+.tableHead {
+  background-color: $slate-100;
+  text-align: left;
+  text-transform: capitalize;
+  th {
+    // width: 100%;
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    &:first-child {
+      padding-left: 20px;
+      padding-right: 0;
+    }
+  }
+}
+
+.tableHead__index {
+  width: 4rem;
+}
+.tableHead__name {
+  min-width: 24rem;
+}
+.tableHead__mail {
+  min-width: 15rem;
+}
+.tableHead__role {
+  width: 8rem;
+}
+
+.tableHead__buttons {
+  min-width: 16rem;
+}
+
+.data__message {
+  display: flex;
+  color: $slate-400;
+  padding: 2rem 1rem;
+  text-transform: capitalize;
+}
