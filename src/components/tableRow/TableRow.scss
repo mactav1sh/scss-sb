@@ -3,6 +3,7 @@
 // if rules are applied in tr then it gets applied globally ?
 .tableRow {
   color: $slate-600;
+  background-color: #fff;
 
   td {
     // width: 100%;
@@ -20,7 +21,7 @@
     width: 4rem;
   }
   .name {
-    min-width: 24rem;
+    min-width: 20rem;
   }
   .mail {
     min-width: 15rem;

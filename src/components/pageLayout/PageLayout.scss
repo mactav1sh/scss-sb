@@ -1,0 +1,23 @@
+@use '../../styles/partials/base/_variables.scss' as *;
+
+.page-layout {
+  background-color: $slate-100;
+  padding: 1rem 3rem 2.5rem 3rem;
+  width: fit-content;
+
+  .wrapper {
+    max-width: $size-screen-lg;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    color: $slate-600;
+    text-transform: capitalize;
+  }
+  .header-text {
+    font-size: 21px;
+  }
+}

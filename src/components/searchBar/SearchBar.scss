@@ -4,11 +4,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1024px; //temp
   padding: 1.5rem 1rem;
+  background-color: #fff;
 
   .heading {
-    font-size: 20px;
+    font-size: 18px;
+    margin-left: 2.2rem;
     color: $slate-600;
     font-weight: 600;
     text-transform: capitalize;
