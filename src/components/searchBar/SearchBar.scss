@@ -6,26 +6,26 @@
   align-items: center;
   max-width: 1024px; //temp
   padding: 1.5rem 1rem;
-}
 
-.searchBar__heading {
-  font-size: 20px;
-  color: $slate-600;
-  font-weight: 600;
-  text-transform: capitalize;
-}
+  .heading {
+    font-size: 20px;
+    color: $slate-600;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
 
-.searchBar__textInput__wrapper {
-  position: relative;
-}
+  .textInput__wrapper {
+    position: relative;
+  }
 
-.searchBar__button {
-  border: none;
-  background: none;
-  color: $slate-400;
-  position: absolute;
-  padding: 8px 7px 8px 12px;
-  left: 0;
-  top: 0;
-  font-size: 20px;
+  .btn {
+    border: none;
+    background: none;
+    color: $slate-400;
+    position: absolute;
+    padding: 8px 7px 8px 12px;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+  }
 }

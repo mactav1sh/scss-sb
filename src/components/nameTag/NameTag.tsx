@@ -8,10 +8,10 @@ interface IProps {
 const NameTag = ({ name }: IProps) => {
   return (
     <div className="nameTag">
-      <div className="nameTag__circle">
-        <span className="nameTag__circle__letter">{name[0]}</span>
+      <div className="circle">
+        <span className="letter">{name[0]}</span>
       </div>
-      <p className="nameTag__name">{name}</p>
+      <p className="name">{name}</p>
     </div>
   );
 };

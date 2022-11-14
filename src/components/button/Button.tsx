@@ -25,7 +25,7 @@ const Button = ({
       style={{ color, backgroundColor }}
       {...props}
     >
-      <div className="btn__contentWrapper">{content}</div>
+      <div className="contentWrapper">{content}</div>
     </button>
   );
 };

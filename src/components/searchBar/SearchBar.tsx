@@ -15,11 +15,11 @@ const SearchBar = () => {
 
   return (
     <div className="searchBar">
-      <p className="searchBar__heading">user list</p>
+      <p className="heading">user list</p>
       <form onSubmit={handleSubmit}>
-        <div className="searchBar__textInput__wrapper">
+        <div className="textInput__wrapper">
           <TextInput placeholder="search here" onChange={handleChange} />
-          <button className="searchBar__button" type="submit">
+          <button className="btn" type="submit">
             <BiSearch />
           </button>
         </div>

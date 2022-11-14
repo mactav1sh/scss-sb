@@ -19,13 +19,13 @@ const TableRow = ({
 }: IProps) => {
   return (
     <tr className="tableRow">
-      <td className="tableRow__index">{index}</td>
-      <td className="tableRow__name">
+      <td className="index">{index}</td>
+      <td className="name">
         <NameTag name={name} />
       </td>
-      <td className="tableRow__mail">{email}</td>
-      <td className="tableRow__role">{role}</td>
-      <td className="tableRow__buttons">
+      <td className="mail">{email}</td>
+      <td className="role">{role}</td>
+      <td className="buttons">
         <Button
           variant="edit"
           content={

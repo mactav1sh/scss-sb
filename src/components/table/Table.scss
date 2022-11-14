@@ -21,23 +21,23 @@
       padding-right: 0;
     }
   }
-}
 
-.tableHead__index {
-  width: 4rem;
-}
-.tableHead__name {
-  min-width: 24rem;
-}
-.tableHead__mail {
-  min-width: 15rem;
-}
-.tableHead__role {
-  width: 8rem;
-}
+  .index {
+    width: 4rem;
+  }
+  .name {
+    min-width: 24rem;
+  }
+  .mail {
+    min-width: 15rem;
+  }
+  .role {
+    width: 8rem;
+  }
 
-.tableHead__buttons {
-  min-width: 16rem;
+  .buttons {
+    min-width: 16rem;
+  }
 }
 
 .data__message {

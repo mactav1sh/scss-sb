@@ -11,11 +11,11 @@ const Table = ({ data }: IProps) => {
       <table className="usersTable">
         <thead>
           <tr className="tableHead">
-            <th className="tableHead__index">no</th>
-            <th className="tableHead__name">profile</th>
-            <th className="tableHead__mail">email</th>
-            <th className="tableHead__role">role</th>
-            <th className="tableHead__buttons"></th>
+            <th className="index">no</th>
+            <th className="name">profile</th>
+            <th className="mail">email</th>
+            <th className="role">role</th>
+            <th className="buttons"></th>
           </tr>
         </thead>
         <tbody>

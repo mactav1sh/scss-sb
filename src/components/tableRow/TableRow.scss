@@ -15,26 +15,26 @@
       padding-right: 0;
     }
   }
-}
 
-.tableRow__index {
-  width: 4rem;
-}
-.tableRow__name {
-  min-width: 24rem;
-}
-.tableRow__mail {
-  min-width: 15rem;
-}
-.tableRow__role {
-  width: 8rem;
-}
+  .index {
+    width: 4rem;
+  }
+  .name {
+    min-width: 24rem;
+  }
+  .mail {
+    min-width: 15rem;
+  }
+  .role {
+    width: 8rem;
+  }
 
-.tableRow__buttons {
-  min-width: 16rem;
-  display: flex;
-  gap: 0.5rem;
-  button {
-    flex: 1;
+  .buttons {
+    min-width: 16rem;
+    display: flex;
+    gap: 0.5rem;
+    button {
+      flex: 1;
+    }
   }
 }
