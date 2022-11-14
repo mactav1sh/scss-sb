@@ -7,6 +7,7 @@
   max-width: 1024px; //temp
   padding: 1.5rem 1rem;
 }
+
 .searchBar__heading {
   font-size: 20px;
   color: $slate-600;
@@ -16,26 +17,6 @@
 
 .searchBar__textInput__wrapper {
   position: relative;
-}
-
-.searchBar__textInput {
-  color: $slate-700;
-  text-align: center;
-  padding: 0.5rem 0.5rem;
-  outline: none;
-  border: 1px solid $slate-300;
-  border-radius: 1000px;
-  background-color: $slate-100;
-  transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-
-  &:focus {
-    border: 1px solid $slate-500;
-  }
-
-  &::placeholder {
-    color: $slate-500;
-    text-transform: capitalize;
-  }
 }
 
 .searchBar__button {
