@@ -1,7 +1,18 @@
 @use '../../styles/partials/base/variables' as *;
 
+.table-container {
+  overflow-x: auto;
+
+  // Hide scrollbar
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .usersTable {
-  // width: 100%;
+  width: 100%;
   color: $slate-600;
   border-collapse: collapse;
 }
@@ -11,7 +22,6 @@
   text-align: left;
   text-transform: capitalize;
   th {
-    // width: 100%;
     font-size: 16px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -23,7 +33,7 @@
   }
 
   .index {
-    width: 4rem;
+    min-width: 4rem;
   }
   .name {
     min-width: 20rem;
@@ -32,7 +42,7 @@
     min-width: 15rem;
   }
   .role {
-    width: 8rem;
+    min-width: 8rem;
   }
 
   .buttons {

@@ -38,9 +38,13 @@
 }
 
 .btn--edit {
-  color: $cyan;
+  &:hover {
+    color: $cyan;
+  }
 }
 
 .btn--delete {
-  color: $red;
+  &:hover {
+    color: $red;
+  }
 }

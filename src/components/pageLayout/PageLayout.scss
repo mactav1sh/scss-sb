@@ -1,4 +1,5 @@
 @use '../../styles/partials/base/_variables.scss' as *;
+@use '../../styles/partials/base/mixins' as *;
 
 .page-layout {
   background-color: $slate-100;
@@ -6,7 +7,17 @@
   width: fit-content;
 
   .wrapper {
-    max-width: $size-screen-lg;
+    max-width: $s-2xl; // fix
+
+    @include mq(md) {
+      max-width: $s-3xl; // fix
+    }
+    @include mq(lg) {
+      max-width: $s-4xl; // fix
+    }
+    @include mq(xl) {
+      max-width: none; // fix
+    }
   }
 
   .header {

@@ -7,7 +7,7 @@ interface IProps {
 
 const Table = ({ data }: IProps) => {
   return (
-    <>
+    <div className="table-container">
       <table className="usersTable">
         <thead>
           <tr className="tableHead">
@@ -32,7 +32,7 @@ const Table = ({ data }: IProps) => {
         </tbody>
       </table>
       {!data && <p className="data__message">No data available.</p>}
-    </>
+    </div>
   );
 };
 

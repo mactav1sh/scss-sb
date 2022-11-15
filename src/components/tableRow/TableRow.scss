@@ -4,9 +4,13 @@
 .tableRow {
   color: $slate-600;
   background-color: #fff;
+  transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+
+  &:hover {
+    background-color: $slate-50;
+  }
 
   td {
-    // width: 100%;
     font-size: 16px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -18,7 +22,7 @@
   }
 
   .index {
-    width: 4rem;
+    min-width: 4rem;
   }
   .name {
     min-width: 20rem;
@@ -27,7 +31,7 @@
     min-width: 15rem;
   }
   .role {
-    width: 8rem;
+    min-width: 8rem;
   }
 
   .buttons {

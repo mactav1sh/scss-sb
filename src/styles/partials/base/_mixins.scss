@@ -7,26 +7,23 @@
   background-color: rgba($color: $color, $alpha: $opacity);
 }
 
-@mixin breakpoint($size) {
-  @if $size == 'sm' {
+@mixin mq($size) {
+  @if $size == sm {
     @media (min-width: 640px) {
       @content;
     }
   }
-  @if $size == 'md' {
-    // return
+  @if $size == md {
     @media (min-width: 768px) {
       @content;
     }
   }
-  @if $size == 'lg' {
-    // return
+  @if $size == lg {
     @media (min-width: 1024px) {
       @content;
     }
   }
-  @if $size == 'xl' {
-    // return
+  @if $size == xl {
     @media (min-width: 1280px) {
       @content;
     }

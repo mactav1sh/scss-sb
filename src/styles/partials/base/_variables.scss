@@ -16,9 +16,15 @@ $red: #f43f5e;
 
 // FONT SIZES
 
-// SPACES
-
-// MAX WIDTH
-$size-screen-sm: 640px;
-$size-screen-md: 768px;
-$size-screen-lg: 1024px;
+// SIZES
+$s-xs: 20rem; /* 320px */
+$s-sm: 24rem; /* 384px */
+$s-md: 28rem; /* 448px */
+$s-lg: 32rem; /* 512px */
+$s-xl: 36rem; /* 576px */
+$s-2xl: 42rem; /* 672px */
+$s-3xl: 48rem; /* 768px */
+$s-4xl: 56rem; /* 896px */
+$s-5xl: 64rem; /* 1024px */
+$s-6xl: 72rem; /* 1152px */
+$s-7xl: 80rem; /* 1280px */
