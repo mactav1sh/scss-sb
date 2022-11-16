@@ -11,13 +11,13 @@
   }
 }
 
-.table {
+.usersTable {
   width: 100%;
   color: $slate-600;
   border-collapse: collapse;
 }
 
-.table-head {
+.tableHead {
   background-color: $slate-100;
   text-align: left;
   text-transform: capitalize;
@@ -31,16 +31,33 @@
       padding-right: 0;
     }
   }
+
+  // .index {
+  //   min-width: 4rem;
+  // }
+  // .name {
+  //   min-width: 20rem;
+  // }
+  // .mail {
+  //   min-width: 15rem;
+  // }
+  // .role {
+  //   min-width: 8rem;
+  // }
+
+  // .buttons {
+  //   min-width: 16rem;
+  // }
 }
 
-.table-message {
+.data--message {
   display: flex;
   color: $slate-400;
   padding: 2rem 1rem;
   text-transform: capitalize;
 }
 
-.table-row {
+.tableRow {
   color: $slate-600;
   background-color: #fff;
   transition: all 0.2s cubic-bezier(0.3, 0, 0.5, 1);
@@ -54,10 +71,31 @@
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 20px;
-
     &:first-child {
       padding-left: 20px;
       padding-right: 0;
+    }
+  }
+
+  .index {
+    min-width: 4rem;
+  }
+  .name {
+    min-width: 20rem;
+  }
+  .mail {
+    min-width: 15rem;
+  }
+  .role {
+    min-width: 8rem;
+  }
+
+  .buttons {
+    min-width: 16rem;
+    display: flex;
+    gap: 0.5rem;
+    button {
+      flex: 1;
     }
   }
 }

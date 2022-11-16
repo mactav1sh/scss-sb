@@ -3,47 +3,60 @@ import './TableRow.scss';
 import Button from '../button/Button';
 import { FiEdit } from 'react-icons/fi';
 import { RiDeleteBin5Line } from 'react-icons/ri';
+import { returnClassName } from '../utils/tools';
+import { ReactNode } from 'react';
 
 interface IProps {
-  name?: string;
-  email?: string;
-  role?: number;
-  index?: number;
+  item?: any;
+  classPrefix?: string;
+  children?: ReactNode;
 }
 
 const TableRow = ({
-  name = 'john smith',
-  email = 'john@mail.com',
-  role = 1,
-  index = 0,
+  item = { name: 'testing', email: 'testing@mail.com', role: 100 },
+  classPrefix = '',
+  children,
 }: IProps) => {
+  const keys = Object.keys(item);
+  console.log(children);
+
   return (
     <tr className="tableRow">
-      <td className="index">{index}</td>
-      <td className="name">
-        <NameTag name={name} />
-      </td>
-      <td className="mail">{email}</td>
-      <td className="role">{role}</td>
+      {/* if there's a children it will return children wrapped in <td> */}
+      {keys.map((key, i) =>
+        children ? (
+          <td key={i} className={returnClassName(classPrefix, key)}>
+            {children}
+          </td>
+        ) : (
+          <td key={i} className={returnClassName(classPrefix, key)}>
+            {item[key]}
+          </td>
+        )
+      )}
+
+      {/* WILL BE REMOVED */}
       <td className="buttons">
         <Button
           variant="edit"
-          content={
-            <>
+          children={
+            <div className="content-wrapper">
               <FiEdit />
               <span>edit</span>
-            </>
+            </div>
           }
         />
+
         <Button
           variant="delete"
-          content={
-            <>
+          children={
+            <div className="content-wrapper">
               <RiDeleteBin5Line />
               <span>delete</span>
-            </>
+            </div>
           }
         />
+        {/* WILL BE REMOVED */}
       </td>
     </tr>
   );

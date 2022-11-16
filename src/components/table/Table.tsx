@@ -1,39 +1,72 @@
+import { ReactNode } from 'react';
 import './Table.scss';
-import { users } from '../../data/users';
-import TableRow from '../tableRow/TableRow';
-interface IProps {
-  data?: typeof users;
+import { returnClassName } from '../utils/tools';
+
+interface TableProps {
+  data?: any;
+  classPrefix?: string;
+  headerRowClass?: string;
+  children?: ReactNode;
 }
 
-const Table = ({ data }: IProps) => {
+// TABLE COMPONENT
+export const Table = ({
+  data,
+  classPrefix = '',
+  headerRowClass = '',
+  children,
+}: TableProps) => {
+  const headers = Object.keys(data?.[0]);
   return (
     <div className="table-container">
-      <table className="usersTable">
+      <table className={`table ${returnClassName(classPrefix, 'table')}`}>
         <thead>
-          <tr className="tableHead">
-            <th className="index">no</th>
-            <th className="name">profile</th>
-            <th className="mail">email</th>
-            <th className="role">role</th>
-            <th className="buttons"></th>
+          <tr className={`table-head ${headerRowClass}`}>
+            {/* data headers */}
+            {headers.map((header, i) => (
+              <th key={i} className={returnClassName(classPrefix, header)}>
+                {header}
+              </th>
+            ))}
           </tr>
         </thead>
-        <tbody>
-          {data &&
-            data?.map((user, i) => (
-              <TableRow
-                key={i}
-                index={i + 1}
-                name={user.name}
-                email={user.email}
-                role={user.role}
-              />
-            ))}
-        </tbody>
+        <tbody>{children}</tbody>
       </table>
-      {!data && <p className="data__message">No data available.</p>}
+      {!data && <p className="table-message">No data available.</p>}
     </div>
   );
 };
 
-export default Table;
+// TABLE ROW COMPONENT
+interface TableRowProps {
+  item?: any;
+  classPrefix?: string;
+  children?: (ReactNode | JSX.Element)[];
+  rowClass?: string;
+}
+
+export const TableRow = ({
+  item,
+  classPrefix = '',
+  children,
+  rowClass = '',
+}: TableRowProps) => {
+  return (
+    <tr className={`table-row ${rowClass}`}>
+      {/* if there's a children it will return children wrapped in <td> */}
+      {children
+        ? children.map((child, i) => (
+            <td key={i} className={returnClassName(classPrefix, `${i + 1}`)}>
+              {child}
+            </td>
+          ))
+        : Object.keys(item).map((key, i) => (
+            <td key={i} className={returnClassName(classPrefix, key)}>
+              {item[key]}
+            </td>
+          ))}
+    </tr>
+  );
+};
+
+export default TableRow;
