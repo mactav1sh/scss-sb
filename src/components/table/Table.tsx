@@ -44,8 +44,9 @@ export const Table = ({
 // TABLE ROW COMPONENT
 interface TableRowProps {
   classPrefix?: string;
-  item?: any;
+  item: any;
   rowClass?: string;
+  renderCell: (item: JSX.Element) => JSX.Element;
 }
 
 // SECOND IMPLEMENTATION OF TABLE ROWS AND CELLS
@@ -53,16 +54,16 @@ export const TableRow = ({
   item,
   classPrefix = '',
   rowClass = '',
+  renderCell,
 }: TableRowProps) => {
-  const renderItem = (item: any) =>
-    Object.keys(item).map((key) => (
-      <td key={nanoid()} className={returnClassName(classPrefix, key)}>
-        {item[key]}
-      </td>
-    ));
-
   return (
-    <tr className={`table-row ${rowClass}`.trimEnd()}>{renderItem(item)}</tr>
+    <tr className={`table-row ${rowClass}`.trimEnd()}>
+      {Object.keys(item).map((key) => (
+        <td key={nanoid()} className={returnClassName(classPrefix, key)}>
+          {renderCell(item[key])}
+        </td>
+      ))}
+    </tr>
   );
 };
 
