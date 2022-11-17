@@ -1,3 +1,4 @@
+import { nanoid } from 'nanoid';
 import PageLayout from '../../components/pageLayout/PageLayout';
 import SearchBar from '../../components/searchBar/SearchBar';
 import { users } from '../../data/users';
@@ -11,34 +12,27 @@ const Users = () => {
     <PageLayout heading="manage users" buttonLabel="add user">
       <SearchBar />
 
-      {/* ***** FIRST WAY OF USAGE *****/}
-      {/* {users && 
-      (
-        <Table classPrefix="users" data={users}>
-          {users.map((user, i) => (
-            <TableRow classPrefix={'table-row'} key={i} item={user} />
-            ))}
-        </Table>
-      )
-      } */}
-
       {/* ***** SECOND WAY OF USAGE *****/}
       {users && (
         <Table classPrefix="users" data={users}>
-          {users.map((user, i) => {
-            // must be in the same order as headers
-            const specialUser = [
-              user.id,
-              <NameTag name={user.name} />,
-              user.email,
-              user.role,
-              <UserButtons />,
-            ];
+          {users.map((user) => {
+            const specialUser = {
+              user: user.id,
+              name: <NameTag name={user.name} />,
+              email: user.email,
+              role: user.role,
+              buttons: <UserButtons />,
+            };
 
             return (
-              <TableRow classPrefix={'table-row'} key={i}>
-                {specialUser}
-              </TableRow>
+              // FIRST WAY OF USAGE
+              <TableRow
+                classPrefix={'table-row'}
+                key={nanoid()}
+                item={specialUser}
+              />
+              // SECOND WAY OF USAGE
+              // <TableRow classPrefix={'table-row'} key={nanoid()} item={user} />
             );
           })}
         </Table>

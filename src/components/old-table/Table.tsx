@@ -1,6 +1,6 @@
 import './Table.scss';
 import { users } from '../../data/users';
-import TableRow from '../tableRow/TableRow';
+import TableRow from '../old-tableRow/TableRow';
 import { returnClassName } from '../utils/tools';
 
 interface IProps {
