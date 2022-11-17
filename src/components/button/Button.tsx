@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import './Button.scss';
 
 interface IProps {
-  content?: ReactNode;
+  children?: ReactNode;
   size?: 'small' | 'medium' | 'large';
   color?: string;
   backgroundColor?: string;
@@ -10,8 +10,11 @@ interface IProps {
   onClick?: () => void;
 }
 
+// TODO: INSTEAD OF CONTENT USE CHILDREN
+// TODO: CREATE A PR REQUEST TO MAIN BRANCH
+
 const Button = ({
-  content = 'click me',
+  children = 'click me',
   size = 'small',
   color,
   backgroundColor,
@@ -25,7 +28,7 @@ const Button = ({
       style={{ color, backgroundColor }}
       {...props}
     >
-      <div className="contentWrapper">{content}</div>
+      {children}
     </button>
   );
 };

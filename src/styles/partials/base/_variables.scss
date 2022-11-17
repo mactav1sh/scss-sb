@@ -1,5 +1,6 @@
 // COLORS
-
+$cyan: #22d3ee;
+$red: #f43f5e;
 $slate-50: #f8fafc;
 $slate-100: #f1f5f9;
 $slate-200: #e2e8f0;
@@ -11,10 +12,18 @@ $slate-700: #334155;
 $slate-800: #1e293b;
 $slate-900: #0f172a;
 
-$cyan: #22d3ee;
-$red: #f43f5e;
-
 // FONT SIZES
+$fs-xs: 0.75rem; /* 12px */
+$fs-sm: 0.875rem; /* 14px */
+$fs-base: 1rem; /* 16px */
+$fs-lg: 1.125rem; /* 18px */
+$fs-xl: 1.25rem; /* 20px */
+$fs-2xl: 1.5rem; /* 24px */
+$fs-3xl: 1.875rem; /* 30px */
+$fs-4xl: 2.25rem; /* 36px */
+$fs-5xl: 3rem; /* 48px */
+$fs-6xl: 3.75rem; /* 60px */
+$fs-7xl: 4.5rem; /* 72px */
 
 // SIZES
 $s-xs: 20rem; /* 320px */

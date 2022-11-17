@@ -27,7 +27,7 @@ export const Default = Template.bind({});
 
 export const Edit = Template.bind({});
 Edit.args = {
-  content: (
+  children: (
     <>
       <FiEdit />
       <span>edit</span>
@@ -38,11 +38,11 @@ Edit.args = {
 
 export const Delete = Template.bind({});
 Delete.args = {
-  content: (
-    <>
+  children: (
+    <div>
       <RiDeleteBin5Line />
       <span>delete</span>
-    </>
+    </div>
   ),
   variant: 'delete',
 };

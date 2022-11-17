@@ -13,7 +13,7 @@ const PageLayout = ({ children, heading, buttonLabel }: IProps) => {
       <div className="header">
         <h1 className="header-text">{heading}</h1>
         <Button
-          content={buttonLabel}
+          children={buttonLabel}
           backgroundColor="#3b82f6"
           color="#fff"
           size="medium"
