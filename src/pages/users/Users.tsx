@@ -30,6 +30,7 @@ const Users = () => {
                 classPrefix={'table-row'}
                 key={nanoid()}
                 item={specialUser}
+                renderCell={(item: JSX.Element) => item}
               />
               // SECOND WAY OF USAGE
               // <TableRow classPrefix={'table-row'} key={nanoid()} item={user} />
