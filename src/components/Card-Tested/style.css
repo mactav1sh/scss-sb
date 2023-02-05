@@ -1,0 +1,59 @@
+.card {
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 2px;
+  padding: 1rem;
+}
+
+.card-collapse-section {
+}
+
+.card-collapse-section-header-label {
+  padding: 0.7rem 0.5rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-collapse-section.active {
+}
+
+.card-header {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 20px;
+  color: rgb(221, 1, 1);
+}
+
+.active .card-header {
+  color: #333;
+}
+
+.card-arrow {
+  font-size: 20px;
+}
+
+.card-collapsed-item {
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s;
+}
+
+.card-collapsed-item > div {
+  padding: 1rem 0.5rem 0.5rem;
+}
+
+.active .card-collapse-section-header-label {
+  border: none none none none;
+  border-bottom: 1px solid var(--tru-grey);
+  border-radius: 0;
+}
+
+.active .card-collapsed-item {
+  max-height: fit-content;
+  overflow: auto;
+  transition: max-height 0.3s;
+}
